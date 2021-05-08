@@ -12,13 +12,11 @@ git clone https://github.com/MVIG-SJTU/AlphaPose.git
 # git pull origin pull/592/head if you use PyTorch>=1.5
 cd AlphaPose
 
-
 # 3. install
-# Get pyyaml for windows https://pyyaml.org/wiki/PyYAML
-pip install PyYAML-5.3.1-cp36-cp36m-win_amd64.whl
-
 pip install cython
+pip install PyYAML-5.3.1-cp36-cp36m-win_amd64.whl  # pyyaml for windows https://pyyaml.org/wiki/PyYAML
 python setup.py build develop --user
+pip install -r requirments.txt
 ```
 
 ### Models
@@ -29,6 +27,8 @@ python setup.py build develop --user
 ## Run
 ```bash
 conda activate alphapose
+
+python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/ --save_img
 ```
 
 
