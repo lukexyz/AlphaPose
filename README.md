@@ -1,3 +1,8 @@
+```bash
+conda activate alphapose
+```
+
+
 
 <div align="center">
     <img src="docs/logo.jpg", width="400">
