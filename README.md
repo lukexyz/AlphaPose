@@ -17,12 +17,14 @@ cd AlphaPose
 # Get pyyaml for windows https://pyyaml.org/wiki/PyYAML
 pip install PyYAML-5.3.1-cp36-cp36m-win_amd64.whl
 
-export PATH=/usr/local/cuda/bin/:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
 pip install cython
-sudo apt-get install libyaml-dev
-python3 setup.py build develop --user
+python setup.py build develop --user
 ```
+
+### Models
+1. Download the object detection model manually: **yolov3-spp.weights**([Google Drive](https://drive.google.com/open?id=1D47msNOOiJKvPOXlnpyzdKA3k6E97NTC) | [Baidu pan](https://pan.baidu.com/s/1Zb2REEIk8tcahDa8KacPNA)). Place it into `detector/yolo/data`.
+
+2. Download our pose models. Place them into `pretrained_models`. All models and details are available in our [Model Zoo](./MODEL_ZOO.md).
 
 ## Run
 ```bash
