@@ -18,6 +18,7 @@ pip install PyYAML-5.3.1-cp36-cp36m-win_amd64.whl  # pyyaml for windows https://
 python setup.py build develop --user
 pip install -r requirments.txt
 pip install -e git+https://github.com/samson-wang/cython_bbox.git#egg=cython-bbox  # cython_bbox windows work-around
+pip install pycocotools-windows  # coco modules windows
 ```
 
 ### Models
@@ -29,7 +30,8 @@ pip install -e git+https://github.com/samson-wang/cython_bbox.git#egg=cython-bbo
 ```bash
 conda activate alphapose
 
-python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/ --save_img
+python scripts/demo_inference.py --indir examples/demo/ --save_img --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth
+python scripts/demo_inference.py --webcam 0 --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth
 ```
 
 
