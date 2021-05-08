@@ -14,6 +14,9 @@ cd AlphaPose
 
 
 # 3. install
+# Get pyyaml for windows https://pyyaml.org/wiki/PyYAML
+pip install PyYAML-5.3.1-cp36-cp36m-win_amd64.whl
+
 export PATH=/usr/local/cuda/bin/:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
 pip install cython
