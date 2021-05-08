@@ -1,3 +1,33 @@
+### Install
+```bash
+# 1. Create a conda virtual environment.
+conda create -n alphapose python=3.6 -y
+conda activate alphapose
+
+# 2. Install PyTorch (Windows CUDA 10.0)
+conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
+
+# 3. Get AlphaPose
+git clone https://github.com/MVIG-SJTU/AlphaPose.git
+# git pull origin pull/592/head if you use PyTorch>=1.5
+cd AlphaPose
+
+
+# 4. install
+export PATH=/usr/local/cuda/bin/:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
+python -m pip install cython
+sudo apt-get install libyaml-dev
+################Only For Ubuntu 18.04#################
+locale-gen C.UTF-8
+# if locale-gen not found
+sudo apt-get install locales
+export LANG=C.UTF-8
+######################################################
+python setup.py build develop
+```
+
+## Run
 ```bash
 conda activate alphapose
 ```
