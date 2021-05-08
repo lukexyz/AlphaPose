@@ -17,6 +17,7 @@ pip install cython
 pip install PyYAML-5.3.1-cp36-cp36m-win_amd64.whl  # pyyaml for windows https://pyyaml.org/wiki/PyYAML
 python setup.py build develop --user
 pip install -r requirments.txt
+pip install -e git+https://github.com/samson-wang/cython_bbox.git#egg=cython-bbox  # cython_bbox windows work-around
 ```
 
 ### Models
