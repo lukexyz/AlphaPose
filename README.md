@@ -31,6 +31,7 @@ pip install pycocotools-windows  # coco modules windows
 conda activate alphapose
 
 python scripts/demo_inference.py --webcam 0 --vis --vis_fast --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth
+
 python scripts/demo_inference.py --indir examples/demo/ --save_img --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth
 ```
 
