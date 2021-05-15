@@ -39,6 +39,9 @@ python scripts/demo_inference.py --webcam 0 --vis --vis_fast --cfg configs/halpe
 # halpe136 model webcam (hands + face)
 python scripts/demo_inference.py --webcam 0 --vis --vis_fast --cfg configs/halpe_136/resnet/256x192_res50_lr1e-3_2x-regression.yaml --checkpoint pretrained_models/halpe136_fast_res50_256x192.pth
 
+## Note: OBS VirtualCam (OBS>Tools) is on webcam stream (1)
+# halpe26 model OBS VirtualCam
+python scripts/demo_inference.py --webcam 1 --vis --vis_fast --cfg configs/halpe_26/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/halpe26_fast_res50_256x192.pth
 ```
 
 
